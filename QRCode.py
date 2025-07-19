@@ -1,8 +1,6 @@
 import qrcode
 from tkinter import *
 
-#      2. EXE
-
 #Function
 def Generate():
    qr = qrcode.QRCode(box_size=20,
@@ -12,13 +10,12 @@ def Generate():
    img = qr.make_image()
    img.save("qr.png")
 
-
 #Window
 window = Tk()
 window.title("QR Code Generator")
 window.geometry("480x60")
 
-#Link Entry
+#Entry
 link = Entry(window,
              width="50")
 link.pack()
@@ -29,5 +26,5 @@ Generate = Button(window,
                   command=Generate)
 Generate.pack()
 
-
+#Mainloop
 window.mainloop()
